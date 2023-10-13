@@ -9,7 +9,7 @@ The script allows users to perform operations such as reading and writing holdin
 
 Install the required library with pip :
 ```python
-pip3 install pymodbus
+pip install pymodbus
 ```
 OR
 ```python
