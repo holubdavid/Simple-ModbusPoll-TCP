@@ -1,4 +1,4 @@
-# SimpleModbusPoll_TCP
+# Simple ModbusPoll TCP
 Simulator for modbus network testing &amp; data logger
 
 The script allows users to perform operations such as reading and writing holding registers, reading coils, and polling holding registers in a loop.
