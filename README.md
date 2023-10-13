@@ -4,7 +4,7 @@ Simulator for modbus network testing &amp; data logger
 The script allows users to perform operations such as reading and writing holding registers, reading coils, and polling holding registers in a loop.
 
 ## Prerequisites
-* Python3.12 
+* Python 3.12 
 * Pymodbus 3.5.4
 
 Install the required library with pip :
