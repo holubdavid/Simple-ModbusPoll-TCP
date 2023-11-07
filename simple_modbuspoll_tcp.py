@@ -103,31 +103,6 @@ def main():
             regid = int(input('Register: '))
             modbus_controller.write_coils_true(regid)
 
-        elif op.lower() == 'ttfill':
-            modbus_controller.write_coils(22, [False] * 1)
-            time.sleep(1)
-            modbus_controller.write_coils(70, [True] * 1)
-            time.sleep(1)
-            modbus_controller.write_coils(71, [False] * 1)
-
-        elif op.lower() == 'lph':
-            while True:
-                litre = 0
-                sens = modbus_controller.read_holding_registers(35, 2)
-                prew = sens.registers[0]
-
-                while litre < 1:
-                    sens = modbus_controller.read_holding_registers(35, 2)
-                    litre = sens.registers[0] - prew
-
-                start_time = datetime.datetime.now()
-                prew = sens.registers[0]
-                litre = 0
-                while litre < 1:
-                    sens = modbus_controller.read_holding_registers(35, 2)
-                    litre = sens.registers[0] - prew
-                end_time = datetime.datetime.now()
-                print((1 / (end_time - start_time).total_seconds()) * 3600)
 
         elif op.lower() == 'q':
             break
